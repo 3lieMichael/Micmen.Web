@@ -3,32 +3,11 @@
   <div class="container">
     <div class="row">
       <div class="owl-carousel owl-theme">
-        <div class="sitem">
-          <span class="icon icon-laptop"></span>
+        <div class="sitem" *ngFor="let item of services">
+          <span [class]="item.icon"></span>
           <div class="content">
-            <h6>Web Design</h6>
-            <p>Lorem Ipsum is simply dummy text of the printing and type setting industry took a galley of type and scrambled.</p>
-          </div>
-        </div>
-        <div class="sitem">
-          <span class="icon icon-megaphone"></span>
-          <div class="content">
-            <h6>Branding</h6>
-            <p>Lorem Ipsum is simply dummy text of the printing and type setting industry took a galley of type and scrambled.</p>
-          </div>
-        </div>
-        <div class="sitem">
-          <span class="icon icon-layers"></span>
-          <div class="content">
-            <h6>Development</h6>
-            <p>Lorem Ipsum is simply dummy text of the printing and type setting industry took a galley of type and scrambled.</p>
-          </div>
-        </div>
-        <div class="sitem">
-          <span class="icon icon-aperture"></span>
-          <div class="content">
-            <h6>Marketing</h6>
-            <p>Lorem Ipsum is simply dummy text of the printing and type setting industry took a galley of type and scrambled.</p>
+            <h6>{{item.name}}</h6>
+            <p>{{item.description}}</p>
           </div>
         </div>
       </div>

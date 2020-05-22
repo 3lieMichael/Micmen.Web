@@ -11,7 +11,10 @@
         <div class="content">
           <h3>I am Elie Michael Ngandu</h3>
           <h6>UI / UX Designer & Web / Software / Mobile app  Developer</h6>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ullamco laboris nisi ut aliquip ex ea commodo.</p>
+          <p>
+            I’m an innovative full-stack developer with over {{experienceYears}} years of experience in the development of software, websites and mobile applications. I love my work and I bielive that it the key that drive me to improve my knolodge and deliver 
+            top of line products to my clients/employers.
+          </p>
           <div class="row">
             <div class="col-sm-6">
               <ul>
@@ -39,28 +42,10 @@
       <div class="clear-fix"></div>
 
       <div class="skills mt-80">
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-3 col-sm-6" *ngFor="let item of skills">
           <div class="prog-item">
-            <h6>Branding</h6>
-            <div class="skills-progress"><span data-value='80%'></span></div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="prog-item">
-            <h6>Web Design</h6>
-            <div class="skills-progress"><span data-value='95%'></span></div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="prog-item">
-            <h6>Development</h6>
-            <div class="skills-progress"><span data-value='75%'></span></div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="prog-item">
-            <h6>Seo</h6>
-            <div class="skills-progress"><span data-value='85%'></span></div>
+            <h6>{{item.name}}</h6>
+            <div class="skills-progress"><span [attr.data-value]='item.percent'></span></div>
           </div>
         </div>
       </div>
